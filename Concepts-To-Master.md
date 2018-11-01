@@ -39,4 +39,34 @@ Ex:
 
  export { name, age};
  ---------------------------------
+Augmented Assignment Operators
+
+There are also some shortcut operators available, called augmented assignment operators. For example, if you want to simply add a new text string to an existing one and return the result, you could do this:
+
+name += ' says hello!';
+
+this is equivalent to 
+
+name = name + ' says hello!';
+--------------------------------
+Comparison Operator:
+
+Used for true/false tests: 
+
+Operator:  ===	
+Name:  Strict equality (is it exactly the same?)
+Ex:  5 === 2 + 4
+
+Operator:  !==
+Name:  Non-equality (is it not the same?)
+Ex:  'Chris' !== 'Ch' + 'ris'
+
+Operator:  <
+Name:  Less than
+Ex:  10 < 6
+
+Operator:  >
+Name:  Greater than
+Ex:  10 > 20
+--------------------------------
 
