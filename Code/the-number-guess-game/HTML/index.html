@@ -28,18 +28,34 @@
     <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
 
     <div class="form">
+        <!-- The next two constants store references to the form text input and submit button and are used to control submitting the guess later on. -->
       <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
     <div class="resultParas">
+            <!-- The first three constants are each made to store a reference to the results paragraphs in our HTML, and are used to insert values into the paragraphs later on in the code: -->
       <p class="guesses"></p>
       <p class="lastResult"></p>
       <p class="lowOrHi"></p>
     </div>
 
     <script>
-      // Your JavaScript goes here
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    //Creates a variable randomNumber. Math.floor  eturns the largest integer less than or equal to a given number. *100 is going to ensure it is a whole number; 
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+  //The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+  //These document queryselectors scan the html document and selects the first element named in the argument parentheses.
+
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
+// Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
+let guessCount = 1;
+let resetButton;
+
+
     </script>
   </body>
 </html>
